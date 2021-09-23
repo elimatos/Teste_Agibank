@@ -27,7 +27,6 @@ Quando insiro o nome do artigo "${artigo}" no campo de pesquisa
 Então o artigo deve ser listado no site
     Wait Until Element Is Visible       //*[@id="post-689"]/a/img
     Element Should Be Visible           //*[@id="post-689"]/a/img
-    Sleep                               1
 
 Quando insiro o nome "${artigo_i}" no campo de pesquisa
     Wait Until Element Is Visible       //*[@id="header-search"]
@@ -38,4 +37,3 @@ Quando insiro o nome "${artigo_i}" no campo de pesquisa
 Então a página deve apresentar a mensagem "${mensagem}"
     Wait Until Element Is Visible       //*[@id="main"]/section/header/h1
     Element Text Should Be              //*[@id="main"]/section/header/h1    ${mensagem}
-    Sleep                               1

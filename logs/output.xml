@@ -1,159 +1,159 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1 (Python 3.9.6 on win32)" generated="20210923 10:49:51.239" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1 (Python 3.9.6 on win32)" generated="20210923 15:02:15.676" rpa="false" schemaversion="2">
 <suite id="s1" name="Web Test" source="C:\Projetos\Teste_Agibank\web_test.robot">
 <kw name="Abrir o navegador" library="resource_web" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser=Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20210923 10:49:51.534" level="INFO">Opening browser 'Chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20210923 10:49:51.534" endtime="20210923 10:49:52.832"/>
+<msg timestamp="20210923 15:02:16.794" level="INFO">Opening browser 'Chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20210923 15:02:16.793" endtime="20210923 15:02:19.920"/>
 </kw>
-<status status="PASS" starttime="20210923 10:49:51.533" endtime="20210923 10:49:52.832"/>
+<status status="PASS" starttime="20210923 15:02:16.793" endtime="20210923 15:02:19.921"/>
 </kw>
 <test id="s1-t1" name="Cenario 1: Pesquisar artigo existente">
 <kw name="Dado que acesso a página home do site HypeFlame" library="resource_web">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20210923 10:49:52.834" level="INFO">Opening url 'https://hypeflame.blog/'</msg>
-<status status="PASS" starttime="20210923 10:49:52.834" endtime="20210923 10:49:55.932"/>
+<msg timestamp="20210923 15:02:19.928" level="INFO">Opening url 'https://hypeflame.blog/'</msg>
+<status status="PASS" starttime="20210923 15:02:19.927" endtime="20210923 15:02:22.612"/>
 </kw>
-<status status="PASS" starttime="20210923 10:49:52.833" endtime="20210923 10:49:55.932"/>
+<status status="PASS" starttime="20210923 15:02:19.925" endtime="20210923 15:02:22.613"/>
 </kw>
 <kw name="Quando insiro o nome do artigo &quot;Introdução ao clean code&quot; no campo de pesquisa" library="resource_web" sourcename="Quando insiro o nome do artigo &quot;${artigo}&quot; no campo de pesquisa">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>//*[@id="header-search"]</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210923 10:49:55.934" endtime="20210923 10:49:55.969"/>
+<status status="PASS" starttime="20210923 15:02:22.615" endtime="20210923 15:02:22.690"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>//*[@id="header-search"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210923 10:49:55.969" level="INFO">Clicking element '//*[@id="header-search"]'.</msg>
-<status status="PASS" starttime="20210923 10:49:55.969" endtime="20210923 10:49:56.022"/>
+<msg timestamp="20210923 15:02:22.691" level="INFO">Clicking element '//*[@id="header-search"]'.</msg>
+<status status="PASS" starttime="20210923 15:02:22.691" endtime="20210923 15:02:22.751"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>//*[@type="search"]</arg>
 <arg>${artigo}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20210923 10:49:56.023" level="INFO">Typing text 'Introdução ao clean code' into text field '//*[@type="search"]'.</msg>
-<status status="PASS" starttime="20210923 10:49:56.022" endtime="20210923 10:49:56.136"/>
+<msg timestamp="20210923 15:02:22.752" level="INFO">Typing text 'Introdução ao clean code' into text field '//*[@type="search"]'.</msg>
+<status status="PASS" starttime="20210923 15:02:22.752" endtime="20210923 15:02:22.885"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>//*[@id="search-container"]/form/button</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210923 10:49:56.137" level="INFO">Clicking element '//*[@id="search-container"]/form/button'.</msg>
-<status status="PASS" starttime="20210923 10:49:56.137" endtime="20210923 10:49:57.137"/>
+<msg timestamp="20210923 15:02:22.886" level="INFO">Clicking element '//*[@id="search-container"]/form/button'.</msg>
+<status status="PASS" starttime="20210923 15:02:22.885" endtime="20210923 15:02:24.079"/>
 </kw>
-<status status="PASS" starttime="20210923 10:49:55.933" endtime="20210923 10:49:57.137"/>
+<status status="PASS" starttime="20210923 15:02:22.614" endtime="20210923 15:02:24.081"/>
 </kw>
 <kw name="Então o artigo deve ser listado no site" library="resource_web">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>//*[@id="post-689"]/a/img</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210923 10:49:57.138" endtime="20210923 10:49:57.169"/>
+<status status="PASS" starttime="20210923 15:02:24.088" endtime="20210923 15:02:24.146"/>
 </kw>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>//*[@id="post-689"]/a/img</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20210923 10:49:57.188" level="INFO">Element '//*[@id="post-689"]/a/img' is displayed.</msg>
-<status status="PASS" starttime="20210923 10:49:57.169" endtime="20210923 10:49:57.188"/>
+<msg timestamp="20210923 15:02:24.165" level="INFO">Element '//*[@id="post-689"]/a/img' is displayed.</msg>
+<status status="PASS" starttime="20210923 15:02:24.146" endtime="20210923 15:02:24.165"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20210923 10:49:58.201" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20210923 10:49:57.188" endtime="20210923 10:49:58.201"/>
+<msg timestamp="20210923 15:02:25.172" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20210923 15:02:24.166" endtime="20210923 15:02:25.173"/>
 </kw>
-<status status="PASS" starttime="20210923 10:49:57.137" endtime="20210923 10:49:58.201"/>
+<status status="PASS" starttime="20210923 15:02:24.084" endtime="20210923 15:02:25.174"/>
 </kw>
 <kw name="Capturar evidência" library="resource_web" type="TEARDOWN">
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20210923 10:49:58.315" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20210923 10:49:58.203" endtime="20210923 10:49:58.315"/>
+<msg timestamp="20210923 15:02:25.316" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210923 15:02:25.178" endtime="20210923 15:02:25.316"/>
 </kw>
-<status status="PASS" starttime="20210923 10:49:58.202" endtime="20210923 10:49:58.316"/>
+<status status="PASS" starttime="20210923 15:02:25.176" endtime="20210923 15:02:25.316"/>
 </kw>
-<status status="PASS" starttime="20210923 10:49:52.832" endtime="20210923 10:49:58.316"/>
+<status status="PASS" starttime="20210923 15:02:19.921" endtime="20210923 15:02:25.317"/>
 </test>
 <test id="s1-t2" name="Cenario 2: Pesquisar artigo inexistente">
 <kw name="Dado que acesso a página home do site HypeFlame" library="resource_web">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20210923 10:49:58.319" level="INFO">Opening url 'https://hypeflame.blog/'</msg>
-<status status="PASS" starttime="20210923 10:49:58.319" endtime="20210923 10:49:58.517"/>
+<msg timestamp="20210923 15:02:25.320" level="INFO">Opening url 'https://hypeflame.blog/'</msg>
+<status status="PASS" starttime="20210923 15:02:25.320" endtime="20210923 15:02:26.100"/>
 </kw>
-<status status="PASS" starttime="20210923 10:49:58.318" endtime="20210923 10:49:58.517"/>
+<status status="PASS" starttime="20210923 15:02:25.319" endtime="20210923 15:02:26.100"/>
 </kw>
 <kw name="Quando insiro o nome &quot;artigo inexistente&quot; no campo de pesquisa" library="resource_web" sourcename="Quando insiro o nome &quot;${artigo_i}&quot; no campo de pesquisa">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>//*[@id="header-search"]</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210923 10:49:58.518" endtime="20210923 10:49:58.546"/>
+<status status="PASS" starttime="20210923 15:02:26.101" endtime="20210923 15:02:26.126"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>//*[@id="header-search"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210923 10:49:58.547" level="INFO">Clicking element '//*[@id="header-search"]'.</msg>
-<status status="PASS" starttime="20210923 10:49:58.546" endtime="20210923 10:49:58.590"/>
+<msg timestamp="20210923 15:02:26.126" level="INFO">Clicking element '//*[@id="header-search"]'.</msg>
+<status status="PASS" starttime="20210923 15:02:26.126" endtime="20210923 15:02:26.179"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>//*[@type="search"]</arg>
 <arg>${artigo_i}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20210923 10:49:58.591" level="INFO">Typing text 'artigo inexistente' into text field '//*[@type="search"]'.</msg>
-<status status="PASS" starttime="20210923 10:49:58.590" endtime="20210923 10:49:58.682"/>
+<msg timestamp="20210923 15:02:26.180" level="INFO">Typing text 'artigo inexistente' into text field '//*[@type="search"]'.</msg>
+<status status="PASS" starttime="20210923 15:02:26.179" endtime="20210923 15:02:26.276"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>//*[@id="search-container"]/form/button</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210923 10:49:58.682" level="INFO">Clicking element '//*[@id="search-container"]/form/button'.</msg>
-<status status="PASS" starttime="20210923 10:49:58.682" endtime="20210923 10:49:59.236"/>
+<msg timestamp="20210923 15:02:26.277" level="INFO">Clicking element '//*[@id="search-container"]/form/button'.</msg>
+<status status="PASS" starttime="20210923 15:02:26.277" endtime="20210923 15:02:27.220"/>
 </kw>
-<status status="PASS" starttime="20210923 10:49:58.517" endtime="20210923 10:49:59.236"/>
+<status status="PASS" starttime="20210923 15:02:26.101" endtime="20210923 15:02:27.220"/>
 </kw>
 <kw name="Então a página deve apresentar a mensagem &quot;Nenhum resultado&quot;" library="resource_web" sourcename="Então a página deve apresentar a mensagem &quot;${mensagem}&quot;">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>//*[@id="main"]/section/header/h1</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210923 10:49:59.238" endtime="20210923 10:49:59.267"/>
+<status status="PASS" starttime="20210923 15:02:27.224" endtime="20210923 15:02:27.272"/>
 </kw>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <arg>//*[@id="main"]/section/header/h1</arg>
 <arg>${mensagem}</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<msg timestamp="20210923 10:49:59.268" level="INFO">Verifying element '//*[@id="main"]/section/header/h1' contains exact text 'Nenhum resultado'.</msg>
-<status status="PASS" starttime="20210923 10:49:59.267" endtime="20210923 10:49:59.293"/>
+<msg timestamp="20210923 15:02:27.273" level="INFO">Verifying element '//*[@id="main"]/section/header/h1' contains exact text 'Nenhum resultado'.</msg>
+<status status="PASS" starttime="20210923 15:02:27.272" endtime="20210923 15:02:27.343"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20210923 10:50:00.304" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20210923 10:49:59.293" endtime="20210923 10:50:00.305"/>
+<msg timestamp="20210923 15:02:28.351" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20210923 15:02:27.343" endtime="20210923 15:02:28.351"/>
 </kw>
-<status status="PASS" starttime="20210923 10:49:59.238" endtime="20210923 10:50:00.307"/>
+<status status="PASS" starttime="20210923 15:02:27.222" endtime="20210923 15:02:28.352"/>
 </kw>
 <kw name="Capturar evidência" library="resource_web" type="TEARDOWN">
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20210923 10:50:00.497" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20210923 10:50:00.311" endtime="20210923 10:50:00.497"/>
+<msg timestamp="20210923 15:02:28.491" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210923 15:02:28.356" endtime="20210923 15:02:28.491"/>
 </kw>
-<status status="PASS" starttime="20210923 10:50:00.310" endtime="20210923 10:50:00.497"/>
+<status status="PASS" starttime="20210923 15:02:28.354" endtime="20210923 15:02:28.491"/>
 </kw>
-<status status="PASS" starttime="20210923 10:49:58.317" endtime="20210923 10:50:00.497"/>
+<status status="PASS" starttime="20210923 15:02:25.318" endtime="20210923 15:02:28.492"/>
 </test>
 <kw name="Fechar o navegador" library="resource_web" type="TEARDOWN">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20210923 10:50:00.500" endtime="20210923 10:50:02.697"/>
+<status status="PASS" starttime="20210923 15:02:28.495" endtime="20210923 15:02:30.836"/>
 </kw>
-<status status="PASS" starttime="20210923 10:50:00.500" endtime="20210923 10:50:02.697"/>
+<status status="PASS" starttime="20210923 15:02:28.494" endtime="20210923 15:02:30.837"/>
 </kw>
 <doc>teste case web</doc>
-<status status="PASS" starttime="20210923 10:49:51.241" endtime="20210923 10:50:02.697"/>
+<status status="PASS" starttime="20210923 15:02:15.685" endtime="20210923 15:02:30.837"/>
 </suite>
 <statistics>
 <total>
